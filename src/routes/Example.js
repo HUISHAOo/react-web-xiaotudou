@@ -10,8 +10,12 @@ const Products = ({ dispatch, products }) => {
     });
   }
   return (
-    <div>
-      <h2>List of Products</h2>
+    <div style={{ display: 'flex', marginTop: 50 }}>
+      <div style={{ width: 200 }}>
+        <span>剪切</span>
+        <span>剪切</span>
+        <span>剪切</span>
+      </div>
       <ProductList onDelete={handleDelete} products={products} />
     </div>
   );

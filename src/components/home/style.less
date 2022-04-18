@@ -1,0 +1,416 @@
+.box{
+  :global{
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+    #div_StatusBar{
+      width:1536px;
+      height:40px;
+      background-color:rgba(231, 234, 237,0.95);
+      position: fixed;
+      bottom: 0px;
+    }
+    #div_windows,#div_cortana,#div_TaskView{
+       float: left;
+       width: 48px;
+       height:40px;
+       text-align: center;
+       line-height: 40px;
+    }
+    .icon-quan{
+      width:1.2em;
+      height:1.2em;
+    }
+    #div_input1{
+      float: left;
+      height: 40px;
+      width: 343px;
+      background-color:#FFFFFF;
+      border: 0.5px solid #B4B4B4;
+      border-top:1px solid #FFFFFF;
+    }
+    #div_input1:hover{
+      border: 2px solid #b4b4b4;
+      width: 341px;
+    }
+    #div_input2{
+      float: left;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 40px;
+    }
+    .icon-ss{
+      width: 1.1em;
+      height: 1.1em;	
+    }
+    #div_input3{
+      float: left;
+      width:301px;
+      height:40px;	
+    }
+    #div_input3 input{
+      width:280px;
+      height:40px;
+      border:0;
+      outline: none;
+      font-size: 16px;
+      color: #562d2d;
+    }
+    ::-webkit-input-placeholder {
+    color: #562d2d;
+    }
+    ::selection {
+            background:#272822;
+            color:#fff;
+    }   
+    ::-moz-selection {
+            background:#272822;
+            color:#fff;
+    }    
+    ::-webkit-selection {
+            background:#272822;
+            color:#fff;
+    }
+    #div_inform{
+       float: right;
+       width: 48px;
+       height:40px;
+       text-align: center;
+       line-height: 40px;
+       border-right: 0.5px solid #B4B4B4;
+       margin-right: 4px;
+    }
+    #div_time{
+       float: right;
+       width: 75px;
+       height:40px;
+    }
+    #div_h-mi,#div_y-m-d{
+      width: 75px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      cursor: default;
+    }
+    #div_pin{
+      float: right;
+      width: 36px;
+      height: 40px;
+    }
+    #div_pin-font{
+      width: 15px;
+      height: 15px;
+      background-color: #FFFFFF;
+      margin: 0 auto;
+      margin-top: 12.5px;
+      border: 0.5px solid black;
+      text-align: center;
+      font-size:13px;
+      cursor: default;
+    }
+    #div_zhong{
+      width: 22px;
+      height: 40px;
+      float: right;
+      font-size: 15px;
+      text-align: center;
+      line-height: 40px;
+      font-family: "微软雅黑";
+      font-weight: 500;
+      cursor: default;
+    }
+    #div_electricity,#div_network,#div_volume,#div_AccordingTo{
+      float: right;
+      width: 23px;
+      height: 40px;
+      text-align: center;
+      line-height: 48px;
+      margin-right: 1PX;
+      
+    }
+    #div_windows,
+    #div_cortana,
+    #div_TaskView,
+    #div_inform,
+    #div_time,
+    #div_pin,
+    #div_zhong,
+    #div_electricity,
+    #div_network,
+    #div_volume,
+    #div_AccordingTo{
+      filter:alpha(Opacity=100);
+      -moz-opacity:1;opacity: 1;
+    }
+    #div_windows:hover,
+    #div_cortana:hover,
+    #div_TaskView:hover,
+    #div_inform:hover,
+    #div_time:hover,
+    #div_pin:hover,
+    #div_zhong:hover,
+    #div_electricity:hover,
+    #div_network:hover,
+    #div_volume:hover,
+    #div_AccordingTo:hover{
+      filter:alpha(Opacity=60);
+      -moz-opacity:0.6;opacity:0.6;
+      background-color:rgba(255, 255, 255,0.95);
+    }
+    #div_TheScreen{
+      width: 100%;
+      height: 824px;
+      background-image:url(../../assets/window.jpg);
+      -moz-background-size:100% 100%;
+       background-size:100% 100%;
+       position: relative;
+    }
+    .icon_computer{
+      width: 2.5em;
+      height:2.5em;
+    }
+    .div_computer{
+      width: 70px;
+      height: 80px;
+      text-align: center;
+      line-height: 35px;
+      position: absolute;	
+      left: 20px;
+      top: 10px;
+      border-radius: 10px;
+    }
+    .div_TheRecycleBin{
+      width: 70px;
+      height: 80px;
+      text-align: center;
+      line-height: 35px;
+      position: absolute;	
+      left: 20px;
+      top: 125px;
+      border-radius: 10px;
+    }
+    .div_ControlPanel{
+      width: 70px;
+      height: 80px;
+      text-align: center;
+      line-height: 35px;
+      position: absolute;	
+      left: 20px;
+      top: 250px;
+      border-radius: 10px;
+    }
+    .div_browser{
+      width: 70px;
+      height: 80px;
+      text-align: center;
+      line-height: 35px;
+      position: absolute;	
+      left: 20px;
+      top: 375px;
+      border-radius: 10px;
+    }
+    .div_Img{
+      width: 70px;
+      height: 80px;
+      text-align: center;
+      line-height: 35px;
+      position: absolute;	
+      left: 20px;
+      top: 500px;
+      border-radius: 10px;
+    }
+    #span_computer{
+      font-size: 13px;
+      color: #FFFFFF;
+    }
+    .div_computer:hover,
+    .div_TheRecycleBin:hover,
+    .div_ControlPanel:hover,
+    .div_Img:hover,
+    .div_browser:hover{
+      background-color:rgba(255, 255, 255,0.15);
+      border: 1px solid #FFFFFF;
+      cursor: default;
+    }
+    #menu{
+    width:180px;
+    height: 175px;
+    overflow: hidden; 
+    box-shadow: 0 1px 1px #888,1px 0 1px #ccc;
+    position: absolute; 
+    display: none;
+    background-color:#f0f0f0;
+    border-radius: 3px;
+    }
+    .menu{
+    width: 160px;
+    height: 29.1px;
+    line-height: 29.1px;
+    padding-left: 30px;
+    
+    }
+    .menu_AccordingTo,.menu_AccordingTo2{
+    width: 150px;
+    height: 29.1px;
+    line-height: 29.1px;
+    padding-left: 30px;
+    position: relative;
+    }
+    .menu:hover,
+    .menu_AccordingTo:hover,
+    .menu_AccordingTo2:hover{
+      background-color: rgba(60, 201, 204,0.35);
+      cursor: default;
+      border: 0.1px solid #999999;
+    }
+    .icon-xShig{
+      width: 0.9em;
+      height: 0.9em;
+      position: absolute;
+      top: 8px;
+      left:0;
+    }
+    #div_suspension{
+      width: 400px;
+      height: 530px;
+      background-color:rgba(0,0,0,0.3);
+      position: absolute;
+      margin-top: 85px;
+      border-radius: 10px 0 0 10px;
+      margin-left: 1500px;
+      
+    }
+    
+    #div_suspension:hover{
+      margin-left: 1136px;
+      transition: margin-left 1.5s ;
+      -webkit-transition: margin-left 1.5s;
+    }
+    #div_suspension1{
+      float: left;
+      width: 36px;
+      height: 530px;
+      border-radius: 10px 0 0 10px;
+      background-color:rgba(255,255,255,0.5);
+      text-align: center;
+      line-height: 530px;
+      cursor: pointer;
+    }
+    .icon-suspension{
+      width: 1.5em;
+      height: 1.5em;
+    }
+    #div_suspension2{
+      float: left;
+      width: 364px;
+      height: 530px;
+      overflow: scroll;
+      overflow-x: hidden;
+      position: relative;
+    }
+    #div_SuspensionTime{
+      width: 364px;
+      height:60px;
+      margin-top: 30px;
+      border-bottom: 2px solid #FFFFFF;
+      font-size: 35px;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 60px;
+    }
+    #div_NoticeItem1,#div_NoticeItem2,#div_NoticeItem3,#div_NoticeItem4,#div_NoticeItem5,#div_NoticeItem6{
+      width: 300px;
+      height: 110px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255,0.9);
+      margin-top: 20px;
+      cursor: pointer;
+      position: relative;
+      border-radius: 5px;
+    }
+    #div_NoticeItem1:hover,#div_NoticeItem2:hover,#div_NoticeItem3:hover,#div_NoticeItem4:hover,#div_NoticeItem5:hover,#div_NoticeItem6:hover{
+      width: 320px;
+      height: 110px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    #div_close1,#div_close2,#div_close3,#div_close4,#div_close5,#div_close6{
+      width: 15px;
+      height: 15px;
+      float: right;
+      background-color: #FFFFFF;
+      text-align: center;
+      line-height: 13px;
+      color:#3cc9cc;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #div_close1:hover,#div_close2:hover,#div_close3:hover,#div_close4:hover,#div_close5:hover,#div_close6:hover{
+      animation:rot_test 0.6s  linear;
+    }
+    @keyframes rot_test{
+      0%{
+        transform:rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    #divNoticeItem-wenzi{
+      width: 300px;
+      height: 95px;
+      position: absolute;
+      top: 15px;	
+    }
+    #divNoticeItem-wenzi:hover{
+      width: 320px;
+    }
+    .icon-wen-ic{
+      width: 2em;
+      height: 2em;	
+      margin-left: 65px;
+      position: absolute;
+    }
+    #icon-wenzi1{	
+      position: absolute;
+      font-size: 20px;
+      font-weight: 600;
+      margin-left: 100px;
+    }
+    #icon-wenzi2{
+      position: absolute;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+    #div_remove{
+      position: fixed;
+      width: 347px;
+      height: 25px;
+      background-color:#999999;
+      margin-left:36px ;
+      margin-top: 505px;
+      z-index: 1;
+    }
+    #div_remove span{
+      font-size: 13px;
+      color: #FFFFFF;
+      cursor: pointer;
+      float: right;
+      line-height: 25px;
+    }
+    #div_remove span:hover{
+      color: #3cc9cc;
+      font-weight: 600;
+    }
+    
+  }
+}
